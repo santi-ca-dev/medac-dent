@@ -1,0 +1,336 @@
+/* HOJA DE ESTILO CSS */
+
+/* ESTILOS GLOBALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header */
+.contenedor-cabecera {
+    text-align: center;
+    padding: 20px;
+    background-color: #296fbe;
+}
+
+.logo-cabecera {
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+.titulo-cabecera {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* TABLA PARA CITAS */
+.contenedor-tabla {
+    width: 100%;
+    margin: 20px auto; /* Centrar horizontalmente */
+}
+
+
+.tabla-responsiva {
+    overflow-x: auto; /* Habilitar scroll horizontal */
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.tabla-citas {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-citas thead {
+    background-color: #296fbe;
+    color: white;
+}
+
+.tabla-citas th,
+.tabla-citas td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.tabla-citas td:last-child {
+    text-align: center; /* Centrar contenido horizontalmente */
+    vertical-align: middle; /* Asegurar que esté centrado verticalmente */
+}
+
+.tabla-citas td:last-child > div {
+    display: inline-flex; /* Crear un contenedor flex para los botones */
+    gap: 10px; /* Espaciado entre botones */
+}
+
+
+/* Estilo de la fila vacía */
+.fila-vacia {
+    text-align: center;
+    font-style: italic;
+    background-color: #e9e9e9;
+    color: #888;
+}
+
+/* Mensaje vacío */
+.mensaje-vacio {
+    color: #888;
+    font-style: italic;
+    padding: 10px;
+}
+
+.btn-eliminar {
+    background-color: #d30505c9; 
+    color: white; 
+    border: none; 
+    border-radius: 16px; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-eliminar:hover {
+    background-color: #d305059d; 
+}
+
+.btn-editar {
+    background-color: #068a53; 
+    color: white; 
+    border: none;
+    border-radius: 16px; 
+    padding: 5px 10px; 
+    margin-right: 20px;
+    cursor: pointer; 
+    font-size: 14px; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-editar:hover {
+    background-color: #068a53cc; 
+}
+
+/* Responsividad */
+@media screen and (max-width: 1200px) {
+    .tabla-responsiva {
+        margin: 10px;
+    }
+
+    .btn-editar{
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tabla-responsiva {
+        margin: 10px;
+    }
+
+    .btn-editar{
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+/* FORMULARIO CITAS */
+.formulario-citas {
+    max-width: 600px;
+    margin: 8vh auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px #0000001a;
+}
+
+/* Estilo base para el input del calendario */
+input[type="date"],
+input[type="datetime-local"] {
+    border-radius: 8px;
+    color: #19406d; /* Texto oscuro */
+    transition: all 0.3s ease; /* Suaviza los cambios */
+}
+
+/* Cambiar color del texto del placeholder */
+input[type="date"]::placeholder,
+input[type="datetime-local"]::placeholder {
+    color: #888; /* Color gris */
+    font-style: italic; /* Texto en cursiva */
+}
+
+.formulario-citas fieldset {
+    border: none;
+    padding: 0;
+}
+
+.formulario-citas legend {
+    font-size: 20px;
+    color: #296fbe;
+    margin-bottom: 10px;
+}
+
+.formulario-citas label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #19406d;
+}
+
+.formulario-citas input,
+.formulario-citas textarea {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #19406d;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    outline: none;
+}
+
+textarea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+textarea::placeholder{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+.formulario-citas input:focus,
+.formulario-citas textarea:focus {
+    border-color: #296fbe; 
+    box-shadow: 0 0 5px #296fbe80; 
+    background-color: #ffffff; 
+}
+
+.formulario-citas textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.botones-formulario {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones-formulario button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #296fbe;
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.botones-formulario button:hover {
+    background-color: #2262a8;
+}
+
+/* Campos con error */
+form .campo-error {
+    border: 1px solid red;
+    background-color: #ffe6e6;
+}
+
+/* Mensajes de error */
+.mensaje-error {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .formulario-citas{
+        margin: auto 10px;
+    }
+}
+
+/* Footer */
+.pie-pagina {
+    background-color: #296fbe;
+    color: white;
+    padding: 20px 10px;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.columna {
+    flex: 1;
+    padding: 10px;
+}
+
+.logo-footer {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.columna h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.columna p,
+.columna a {
+    margin: 5px 0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.columna p i,
+.columna a i {
+    margin-right: 8px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.columna a:hover {
+    text-decoration: underline;
+    color: #e0bd31;
+}
+
+.icono-redes {
+    display: inline-block;
+    margin: 5px;
+    font-size: 24px;
+    color: white;
+}
+
+.icono-redes:hover {
+    color: #e0bd31; 
+}
+
+/* Responsive móvil */
+@media screen and (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .columna {
+        margin-bottom: 20px;
+    }
+
+    .columna:last-child {
+        margin-bottom: 0;
+    }
+}

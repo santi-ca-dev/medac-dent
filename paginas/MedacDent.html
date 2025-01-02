@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas - MedacDent</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <div class="contenedor-cabecera">
+            <img src="../img/logo.png" alt="Logo de MedacDent" class="logo-cabecera">
+            <h1 class="titulo-cabecera">Gestión de Citas</h1>
+        </div>
+    </header>
+    <!-- Tabla de citas -->
+    <div class="contenedor-tabla">
+        <div class="tabla-responsiva">
+            <table class="tabla-citas">
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Fecha</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>DNI</th>
+                        <th>Teléfono</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="fila-vacia">
+                        <td colspan="9" class="mensaje-vacio">No hay citas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>    
+    <!-- Formulario de citas -->
+        <form id="formulario-citas" class="formulario-citas" autocomplete="off">
+            <fieldset>
+                <legend>Datos de la Cita</legend>
+
+                <!-- Fecha -->
+                <label for="fecha">Fecha:</label>
+                <input type="datetime-local" id="fecha" name="fecha">
+
+                <!-- Nombre -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: John">
+
+                <!-- Apellidos -->
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Ej: Doe Doe">
+
+                <!-- DNI -->
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" placeholder="Ej: 12345678G">
+
+                <!-- Teléfono -->
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 658996741">
+
+                <!-- Fecha de nacimiento -->
+                <label for="nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="nacimiento" name="nacimiento">
+
+                <!-- Observaciones -->
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones" placeholder="Alergias, patologías, necesidades especiales..."></textarea>
+
+                <!-- Botones -->
+                <div class="botones-formulario">
+                    <button type="submit" id="guardar">Guardar</button>
+                    <button type="reset" id="cancelar">Limpiar</button>
+                </div>
+            </fieldset>
+        </form>
+    <!-- Footer -->
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <!-- Columna 1: Logo y descripción -->
+            <div class="columna">
+                <img src="../img/logo.png" alt="Logo MedacDent" class="logo-footer">
+                <p>MedacDent Clínica Dental</p>
+            </div>
+    
+            <!-- Columna 2: Contacto -->
+            <div class="columna">
+                <h4>Contacto</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Calle Salud, Nº 123, 29001 Málaga</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+34951123456">+34 951 123 456</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@medacdent.com">info@medacdent.com</a></p>
+            </div>
+    
+            <!-- Columna 3: Redes sociales -->
+            <div class="columna">
+                <h4>Redes Sociales</h4>
+                <a href="#" class="icono-redes"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="icono-redes"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="icono-redes"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>   
+    <!-- Enlaces JavaScript -->
+    <script type="module" src="../js/validarFormulario.js"></script>
+    <script type="module" src="../js/gestionarCitas.js"></script>
+    <script type="module" src="../js/Cita.js"></script>
+</body>
+</html>
