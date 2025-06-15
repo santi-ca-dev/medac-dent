@@ -118,7 +118,7 @@ body {
     background-color: #068a53cc; 
 }
 
-/* Responsividad */
+/* Responsive */
 @media screen and (max-width: 1200px) {
     .tabla-responsiva {
         margin: 10px;
